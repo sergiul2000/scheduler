@@ -29,9 +29,8 @@ public class Client extends BasicUser {
         super();
     }
 
-    public Client(Long id, String username, String password) {
+    public Client( String username, String password) {
         super();
-        this.id = id;
         this.username = username;
         this.password = password;
     }

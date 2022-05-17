@@ -1,10 +1,12 @@
 package Services;
 
 import model.Sala;
+import org.springframework.stereotype.Service;
 import repos.SalaRepo;
 
 import java.util.List;
 
+@Service
 public class SalaServiceImpl implements  SalaService{
     SalaRepo salaRepo;
 
