@@ -5,9 +5,9 @@ import model.Rezervare;
 import java.util.List;
 
 public interface RezervareService {
-    Rezervare findById(int id);
+    Rezervare findById(Long id);
     Rezervare add(Rezervare rezervare);
     List<Rezervare> listAll();
-    void remove(int id);
+    void remove(Long id);
     Rezervare update(Rezervare rezervare);
 }

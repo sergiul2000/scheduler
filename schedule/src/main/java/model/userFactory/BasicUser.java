@@ -13,12 +13,10 @@ public abstract class BasicUser {
 
 
 
-    public BasicUser(int id, String username, String password) {
+    public BasicUser() {
         this.dataSource=new DataSourceImpl();
     }
 
-    public BasicUser() {
-    }
 
 
     public DataSource getDataSource() {

@@ -10,7 +10,7 @@ public class Angajat extends BasicUser {
     }
 
     public Angajat(int id, String username, String password) {
-        super(id, username, password);
+        super();
     }
 
     public Angajat() {

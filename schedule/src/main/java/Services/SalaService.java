@@ -6,10 +6,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 public interface SalaService{
-    Sala findById(int id);
-        Sala findByNr(int nr);
+    Sala findById(Long id);
         Sala add(Sala sala);
         List<Sala> listAll();
-        void remove(int id);
+        void remove(Long id);
         Sala update(Sala sala);
 }

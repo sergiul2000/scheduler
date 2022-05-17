@@ -13,7 +13,7 @@ public class Client extends BasicUser {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @Column(name = "username", nullable = false)
     private String username;
     @Column(name = "pass", nullable = false)
@@ -29,8 +29,8 @@ public class Client extends BasicUser {
         super();
     }
 
-    public Client(int id, String username, String password) {
-        super(id, username, password);
+    public Client(Long id, String username, String password) {
+        super();
         this.id = id;
         this.username = username;
         this.password = password;
@@ -58,11 +58,11 @@ public class Client extends BasicUser {
         return Objects.hash(id, username, password);
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

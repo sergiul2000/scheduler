@@ -2,6 +2,8 @@ package repos;
 
 import model.Sala;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface SalaRepo extends JpaRepository<Sala, Integer> {
+@Repository
+public interface SalaRepo extends JpaRepository<Sala, Long> {
 }
