@@ -8,7 +8,7 @@ public class Sala {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Long id;
     @Column(name = "nr")
     private int nr;
 
@@ -28,7 +28,7 @@ public class Sala {
     public Sala() {
     }
 
-    public Sala(int id, int nr) {
+    public Sala(Long id, int nr) {
         this.id = id;
         this.nr = nr;
     }
@@ -41,11 +41,11 @@ public class Sala {
                 '}';
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
