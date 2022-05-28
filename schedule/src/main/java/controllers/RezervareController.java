@@ -20,12 +20,13 @@ public class RezervareController {
 
 
     @GetMapping("/{id}")
-    public Rezervare getRezervareById(@PathVariable Long id){
+    public Rezervare getRezervareById(@PathVariable int id){
         return rezervareService.findById(id);
     }
 
     @GetMapping("/all")
     public List<Rezervare> getRezervare(){
+        System.out.println("am ajuns aici");
         return rezervareService.listAll();
     }
 
@@ -35,7 +36,7 @@ public class RezervareController {
     }
 
     @PostMapping("/deleteSala/{id}")
-    public void deleteRezervareById(@PathVariable Long id){
+    public void deleteRezervareById(@PathVariable int id){
         rezervareService.remove(id);
     }
     @PostMapping("/updateSala")

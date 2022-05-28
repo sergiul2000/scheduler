@@ -19,7 +19,7 @@ public class SalaController {
     }
 
     @GetMapping("/{id}")
-    public Sala getSalaById(@PathVariable Long id){
+    public Sala getSalaById(@PathVariable int id){
         return salaService.findById(id);
     }
 
@@ -34,7 +34,7 @@ public class SalaController {
     }
 
     @PostMapping("/deleteSala/{id}")
-    public void deleteSalaById(@PathVariable Long id){
+    public void deleteSalaById(@PathVariable int id){
         salaService.remove(id);
     }
     @PostMapping("/updateSala")

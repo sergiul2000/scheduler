@@ -1,9 +1,9 @@
 package repos;
 
-import model.Client;
+import model.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClientRepo extends JpaRepository<Client, Integer> {
+public interface AdminRepo extends JpaRepository<Admin,Integer> {
 }

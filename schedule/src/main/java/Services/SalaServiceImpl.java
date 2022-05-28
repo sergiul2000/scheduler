@@ -15,7 +15,7 @@ public class SalaServiceImpl implements  SalaService{
     }
 
     @Override
-    public Sala findById(Long id) {
+    public Sala findById(int id) {
         return this.salaRepo.findById(id).get();
     }
 
@@ -30,7 +30,7 @@ public class SalaServiceImpl implements  SalaService{
     }
 
     @Override
-    public void remove(Long id) {
+    public void remove(int id) {
         salaRepo.delete(salaRepo.findById(id).get());
     }
 

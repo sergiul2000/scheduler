@@ -9,7 +9,7 @@ public class Rezervare {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     @Column(name = "idClient")
     private int idClient;
     @Column(name = "idSala")
@@ -19,7 +19,7 @@ public class Rezervare {
     @Column(name = "data")
     private Date data;
 
-    public Rezervare(Long id, int idClient, int idSala, Date date, int ora) {
+    public Rezervare(int id, int idClient, int idSala, Date date, int ora) {
         this.id = id;
         this.idClient = idClient;
         this.idSala = idSala;
@@ -30,11 +30,11 @@ public class Rezervare {
     public Rezervare() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

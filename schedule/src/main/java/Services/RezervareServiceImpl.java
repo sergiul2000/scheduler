@@ -17,7 +17,7 @@ public class RezervareServiceImpl implements RezervareService{
     }
 
     @Override
-    public Rezervare findById(Long id) {
+    public Rezervare findById(int id) {
         return rezervareRepo.findById(id).get();
     }
 
@@ -32,7 +32,7 @@ public class RezervareServiceImpl implements RezervareService{
     }
 
     @Override
-    public void remove(Long id) {
+    public void remove(int id) {
         rezervareRepo.delete(rezervareRepo.findById(id).get());
     }
 
