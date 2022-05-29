@@ -6,8 +6,7 @@ import java.util.List;
 
 public interface RezervareService {
     Rezervare findById(int id);
-    Rezervare add(Rezervare rezervare);
-    List<Rezervare> listAll();
-    void remove(int id);
-    Rezervare update(Rezervare rezervare);
+    Rezervare addRezervare(Rezervare rezervare);
+    List<Rezervare> getRezervari();
+    void deleteRezervare(int id);
 }

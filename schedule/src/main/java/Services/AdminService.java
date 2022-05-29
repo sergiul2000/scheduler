@@ -8,8 +8,8 @@ import java.util.Optional;
 
 @Service
 public interface AdminService {
-    public Optional<Admin> getAdminById(int idAdmin);
-    public List<Admin> getAdmin();
+    public Optional<Admin> findById(int idAdmin);
+    public List<Admin> getAdmins();
     public Admin addAdmin(Admin admin);
     public void deleteAdmin(int idAdmin);
 }

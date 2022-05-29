@@ -7,8 +7,7 @@ import java.util.List;
 
 public interface SalaService{
     Sala findById(int id);
-        Sala add(Sala sala);
-        List<Sala> listAll();
-        void remove(int id);
-        Sala update(Sala sala);
+        Sala addSala(Sala sala);
+        List<Sala> getSali();
+        void deleteSala(int id);
 }

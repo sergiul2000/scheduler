@@ -20,24 +20,19 @@ public class SalaServiceImpl implements  SalaService{
     }
 
     @Override
-    public Sala add(Sala sala) {
+    public Sala addSala(Sala sala) {
         return this.salaRepo.save(sala);
     }
 
     @Override
-    public List<Sala> listAll() {
+    public List<Sala> getSali() {
         return salaRepo.findAll();
     }
 
     @Override
-    public void remove(int id) {
+    public void deleteSala(int id) {
         salaRepo.delete(salaRepo.findById(id).get());
     }
 
-    @Override
-    public Sala update(Sala updated) {
-        Sala sala = salaRepo.findById(updated.getId()).get();
-        sala.setNr(updated.getNr());
-        return salaRepo.save(sala);
-    }
+
 }

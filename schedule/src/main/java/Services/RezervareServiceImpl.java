@@ -22,24 +22,19 @@ public class RezervareServiceImpl implements RezervareService{
     }
 
     @Override
-    public Rezervare add(Rezervare rezervare) {
+    public Rezervare addRezervare(Rezervare rezervare) {
         return rezervareRepo.save(rezervare);
     }
 
     @Override
-    public List<Rezervare> listAll() {
+    public List<Rezervare> getRezervari() {
         return rezervareRepo.findAll();
     }
 
     @Override
-    public void remove(int id) {
+    public void deleteRezervare(int id) {
         rezervareRepo.delete(rezervareRepo.findById(id).get());
     }
 
-    @Override
-    public Rezervare update(Rezervare updated) {
-        Rezervare rezervare = rezervareRepo.findById(updated.getId()).get();
-        rezervare.setOra(updated.getOra());
-        return rezervareRepo.save(rezervare);
-    }
+
 }

@@ -22,28 +22,19 @@ public class ClientController {
         return clientService.findById(id);
     }
 
-    @GetMapping("/getClient")
-    public Client getClientByName(@RequestBody Client client){
-        return clientService.findByName(client.getUsername());
-    }
-
     @GetMapping("/all")
     public List<Client> getClient(){
-        return clientService.getAll();
+        return clientService.getClients();
     }
 
     @PostMapping("/addClient")
     public Client createClient(@RequestBody Client client){
-        return clientService.add(client);
+        return clientService.addClient(client);
     }
 
     @PostMapping("/deleteClient/{id}")
     public void deleteClientById(@PathVariable int id){
-        clientService.remove(id);
-    }
-    @PostMapping("/updateClient")
-    public Client updateClient(@RequestBody Client client){
-        return clientService.update(client);
+        clientService.deleteClient(id);
     }
 
 

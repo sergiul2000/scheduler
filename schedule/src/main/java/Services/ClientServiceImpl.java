@@ -21,38 +21,20 @@ public class ClientServiceImpl implements ClientService{
         return clientRepo.findById(id).get();
     }
 
-    @Override
-    public Client findByName(String username) {
-        List<Client> clients = clientRepo.findAll();
-        for(Client c : clients){
-            if(c.getUsername().equals(username)){
-                //System.out.println(c.toString());
-                return c;
-            }
-        }
-        return null;
-    }
 
     @Override
-    public Client add(Client client) {
+    public Client addClient(Client client) {
         return clientRepo.save(client);
     }
 
     @Override
-    public List<Client> getAll() {
+    public List<Client> getClients() {
         return clientRepo.findAll();
     }
 
     @Override
-    public void remove(int id) {
+    public void deleteClient(int id) {
         clientRepo.delete(clientRepo.findById(id).get());
     }
 
-    @Override
-    public Client update(Client updated) {
-        Client client = clientRepo.findById(updated.getId()).get();
-        client.setUsername(updated.getUsername());
-        client.setPass(updated.getPass());
-        return clientRepo.save(client);
-    }
 }

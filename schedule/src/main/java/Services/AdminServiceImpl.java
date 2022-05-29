@@ -13,12 +13,12 @@ public class AdminServiceImpl implements AdminService{
     AdminRepo adminRepo;
 
     @Override
-    public Optional<Admin> getAdminById(int idAdmin) {
+    public Optional<Admin> findById(int idAdmin) {
         return adminRepo.findById(idAdmin);
     }
 
     @Override
-    public List<Admin> getAdmin() {
+    public List<Admin> getAdmins() {
         return adminRepo.findAll();
     }
 

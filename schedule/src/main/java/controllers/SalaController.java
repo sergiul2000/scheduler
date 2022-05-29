@@ -25,21 +25,17 @@ public class SalaController {
 
     @GetMapping("/all")
     public List<Sala> getSala(){
-        return salaService.listAll();
+        return salaService.getSali();
     }
 
     @PostMapping("/addSala")
     public Sala createSala(@RequestBody Sala sala){
-        return salaService.add(sala);
+        return salaService.addSala(sala);
     }
 
     @PostMapping("/deleteSala/{id}")
     public void deleteSalaById(@PathVariable int id){
-        salaService.remove(id);
-    }
-    @PostMapping("/updateSala")
-    public Sala updateSala(@RequestBody Sala sala){
-        return salaService.update(sala);
+        salaService.deleteSala(id);
     }
 
 
