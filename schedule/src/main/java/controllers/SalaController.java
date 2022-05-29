@@ -23,7 +23,7 @@ public class SalaController {
         return salaService.findById(id);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/allSali")
     public List<Sala> getSala(){
         return salaService.getSali();
     }

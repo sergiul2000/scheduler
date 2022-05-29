@@ -12,6 +12,7 @@ public class Admin extends User {
     private int id;
 
     public Admin() {
+        super();
     }
 
     public Admin(String nume, String prenume, String email, String username, String pass) {
@@ -23,4 +24,11 @@ public class Admin extends User {
 
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

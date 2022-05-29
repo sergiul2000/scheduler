@@ -24,7 +24,7 @@ public class RezervareController {
         return rezervareService.findById(id);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/allRezervari")
     public List<Rezervare> getRezervare(){
         //System.out.println("am ajuns aici");
         return rezervareService.getRezervari();

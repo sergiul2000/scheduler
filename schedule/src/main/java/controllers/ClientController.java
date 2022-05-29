@@ -3,12 +3,14 @@ package controllers;
 import Services.ClientService;
 import model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping(path ="/client")
+@Controller
 public class ClientController {
     @Autowired
     private ClientService clientService;
@@ -22,7 +24,7 @@ public class ClientController {
         return clientService.findById(id);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/allClients")
     public List<Client> getClient(){
         return clientService.getClients();
     }
