@@ -17,6 +17,7 @@ public class AdminController {
 
     @RequestMapping(method = RequestMethod.GET,value = "/getAdmins")
     public List<Admin> getAdmins(){
+        System.out.println("aici");
         return adminLogic.getAdmins();
     }
 
