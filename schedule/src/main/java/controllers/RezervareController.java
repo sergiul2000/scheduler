@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rezervare")
+@RequestMapping(path = "/rezervare")
 public class RezervareController {
     @Autowired
     private RezervareService rezervareService;
@@ -30,12 +30,12 @@ public class RezervareController {
         return rezervareService.getRezervari();
     }
 
-    @PostMapping("/addSala")
+    @PostMapping("/addRezervare")
     public Rezervare createRezervare(@RequestBody Rezervare rezervare){
         return rezervareService.addRezervare(rezervare);
     }
 
-    @PostMapping("/deleteSala/{id}")
+    @PostMapping("/deleteRezervare/{id}")
     public void deleteRezervareById(@PathVariable int id){
         rezervareService.deleteRezervare(id);
     }
