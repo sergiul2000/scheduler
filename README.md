@@ -52,4 +52,6 @@ metodele din clasele Service.
 Toata aplicatia contine adnotari, iar in clasele din Controllers este sunt mapate request-urile pentru 
 endpoints. 
 
+Diagrama de dependente
 
+![img.png](img.png)
